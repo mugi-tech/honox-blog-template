@@ -8,7 +8,6 @@ export const GET = createRoute(async (c) => {
     apiKey: c.env.MICROCMS_API_KEY,
   });
   const categories = await client.getList<Category>({ endpoint: 'categories' });
-  return c.render(
-    <div></div>
-  );
+  console.log(categories.contents);
+  return c.render(<div>hello!</div>);
 });
