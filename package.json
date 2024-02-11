@@ -1,0 +1,32 @@
+{
+  "name": "basic",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --mode client && vite build",
+    "preview": "wrangler pages dev ./dist",
+    "deploy": "$npm_execpath run build && wrangler pages deploy ./dist"
+  },
+  "private": true,
+  "dependencies": {
+    "@cloudflare/workers-types": "^4.20240208.0",
+    "gray-matter": "^4.0.3",
+    "hono": "^4.0.0",
+    "honox": "^0.1.0",
+    "microcms-js-sdk": "^2.7.0",
+    "tocbot": "^4.25.0",
+    "zenn-content-css": "^0.1.153",
+    "zenn-markdown-html": "^0.1.153"
+  },
+  "devDependencies": {
+    "@hono/vite-cloudflare-pages": "^0.2.4",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^8.56.0",
+    "postcss": "^8.4.35",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.0.12",
+    "wrangler": "^3.27.0"
+  }
+}
